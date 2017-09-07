@@ -7,4 +7,5 @@ class user extends Controller{
 
     }
 }
+$controller=new user();
 ?>

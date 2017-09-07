@@ -5,5 +5,5 @@ class index extends Controller{
         $res->render("hello");
     }
 }
-$controller=index;
+$controller=new index();
 ?>
