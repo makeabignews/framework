@@ -1,6 +1,14 @@
 <?
+session_start();
 require_once './core/res.php';
 require_once './core/controller.php';
+require_once './core/dbhelper.php';
+require_once './config.php';
+
+
+if($config->isMysql){
+    $dbHelper=new DbHelper($config->mysql_server_name,$config->mysql_username,$config->mysql_password,$config->mysql_database);    
+}
 
 if(isset($_REQUEST['controller'])){
     $controller=$_REQUEST['controller'];
