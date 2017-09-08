@@ -4,7 +4,7 @@ class config{
     public $isMysql=true;
     public $mysql_server_name='localhost';
     public $mysql_username='root';
-    public $mysql_password='';
+    public $mysql_password='00990000';
     public $mysql_database='db';
 }
 $config=new config();
