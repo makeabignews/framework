@@ -1,6 +1,6 @@
 <?
 session_start();
-error_reporting(0);
+//error_reporting(0);
 //error_reporting(E_ALL^E_NOTICE^E_WARNING);
 require_once './core/res.php';
 require_once './core/controller.php';
@@ -27,6 +27,8 @@ if(isset($_REQUEST['controller'])){
     $controller="index";
 }
 
+
+
 if(isset($_REQUEST['function'])){
     $function=$_REQUEST['function'];
 }else{
@@ -38,6 +40,8 @@ if(isset($_REQUEST['function'])){
 $controller_file="./controller/$controller.php";
 if(file_exists($controller_file)){
     require_once $controller_file;
+
+    $controller=new $controller($dbHelper);
 
     if(is_callable(array($controller,$function))){
         $controller->$function($_REQUEST,$res);

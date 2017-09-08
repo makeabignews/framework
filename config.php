@@ -5,7 +5,7 @@ class config{
     public $mysql_server_name='localhost';
     public $mysql_username='root';
     public $mysql_password='00990000';
-    public $mysql_database='db';
+    public $mysql_database='semioe';
 }
 $config=new config();
 ?>

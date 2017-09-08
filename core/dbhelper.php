@@ -6,7 +6,7 @@ class DbHelper{
     private $mysql_password;
     private $mysql_database;
 
-    private $conn;
+    public $conn;
     function __construct($mysql_server_name,$mysql_username,$mysql_password,$mysql_database){
         $this->mysql_server_name=$mysql_server_name;
         $this->mysql_username=$mysql_username;
@@ -21,5 +21,17 @@ class DbHelper{
             exit;
         }
     }
+	function get_json($sql){
+        $result = mysql_query($sql,$this->conn);
+        if($result){
+            $arr=array();
+            while($row = mysql_fetch_array($result)){
+                array_push($arr,$row);
+            }
+            return json_encode($arr);
+        }else{
+            return "[]";
+        }
+	}
 }
 ?>
