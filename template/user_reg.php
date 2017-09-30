@@ -8,10 +8,11 @@
     <link href="/public/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <h2>煮豆问答</h2>
-    <a href="/user/ask">提问</a>
-    <a href="/user/login">登陆</a>
-    <a href="/user/reg">注册</a>
-    <p><img src="/public/image/building.gif" alt=""></p>
+    <h2>注册</h2>
+    <form action="" method="post">
+        <input type="text" name="user_name" id="user_name">
+        <input type="text" name="user_pass" id="user_pass">
+        <input type="submit" value="reg">
+    </form>
 </body>
 </html>

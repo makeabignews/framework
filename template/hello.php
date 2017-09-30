@@ -12,6 +12,5 @@
     <a href="/user/ask">提问</a>
     <a href="/user/login">登陆</a>
     <a href="/user/reg">注册</a>
-    <p><img src="/public/image/building.gif" alt=""></p>
 </body>
 </html>
