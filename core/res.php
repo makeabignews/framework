@@ -3,6 +3,9 @@ class Res{
     function send($str){
         echo $str;
     }
+    function json_mode(){
+        header('Content-type:text/json');
+    }
     function render($templateName){
         $file_path = "./template/$templateName.html";
         if(file_exists($file_path)){
